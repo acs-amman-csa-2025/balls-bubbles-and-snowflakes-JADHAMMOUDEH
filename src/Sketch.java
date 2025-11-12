@@ -2,9 +2,21 @@ import processing.core.PApplet;
 
 public class Sketch extends PApplet {
 
-    /** Represents one ball */
+    /** Represents four ball */
     private Ball ball1;
-
+    private Ball ball2;
+    private Ball ball3;
+    private Ball ball4;
+    private Bubble bubble1;
+    private Bubble bubble2;
+    private Bubble bubble3;
+    private Bubble bubble4;
+    private Snowflake snowflake1;
+    private Snowflake snowflake2;
+    private Snowflake snowflake3;
+    private Snowflake snowflake4;
+    
+    
     /**
      * This method can only be used to change the window size. It runs before the
      * window is created.
@@ -18,7 +30,29 @@ public class Sketch extends PApplet {
      * this to initialize the sketch.
      */
     public void setup() {
-        ball1 = new Ball(this);
+        
+        // This creates the ball objects.
+        ball1 = new Ball(this,35,300,300,5,-2);
+        ball2 = new Ball(this,50,400,100,4,3);
+        ball3 = new Ball(this,45,300,100,2,5);
+        ball4 = new Ball(this,20,300,367,5,-4);
+        // This pargarph sets the colors for the balls.
+        ball1.setColors(color(0, 255, 0), color(0));      
+        ball2.setColors(color(255, 0, 0), color(0));      
+        ball3.setColors(color(0, 255, 255), color(0));      
+        ball4.setColors(color(255, 255, 0), color(0));
+        // This pargraph makes the bubble objects
+        bubble1 = new Bubble(this,20,300,300,0,-2);
+        bubble2 = new Bubble(this,25,400,100,0,-3);
+        bubble3 = new Bubble(this,30,300,100,0,-5);
+        bubble4 = new Bubble(this,15,300,367,0,-4);
+        // This pargarph makes teh objects for the snowflakes
+        snowflake1 = new Snowflake(this,40,300,200,0,-4);
+        snowflake2 = new Snowflake(this,30,100,100,1,2);
+        snowflake3 = new Snowflake(this,10,400,300,0,3);
+        snowflake4 = new Snowflake(this,20,200,400,1,2);
+
+
         
     }
 
@@ -31,6 +65,28 @@ public class Sketch extends PApplet {
         background(180, 180, 255);
         ball1.draw();
         ball1.move();
+        ball2.draw();
+        ball2.move();
+        ball3.move();
+        ball3.draw();
+        ball4.draw();
+        ball4.move();
+        bubble1.draw();
+        bubble1.move();
+        bubble2.draw();
+        bubble2.move();
+        bubble3.move();
+        bubble3.draw();
+        bubble4.draw();
+        bubble4.move();
+        snowflake1.draw();
+        snowflake1.move();
+        snowflake2.draw();
+        snowflake2.move();
+        snowflake3.move();
+        snowflake3.draw();
+        snowflake4.draw();
+        snowflake4.move();
     }
 
     /** All processing sketches have to use this main method. Don't touch this! */

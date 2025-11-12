@@ -30,7 +30,7 @@ class Ball {
         y = 100;
         xSpeed = 2;
         ySpeed = -1;
-        fillColor = s.color(255, 100, 100);
+        fillColor = s.color(255, 0, 0);
         borderColor = s.color(0, 0, 0);
     }
 
