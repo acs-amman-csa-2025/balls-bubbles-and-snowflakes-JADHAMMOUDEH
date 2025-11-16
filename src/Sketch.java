@@ -1,8 +1,10 @@
 import processing.core.PApplet;
 
+
 public class Sketch extends PApplet {
 
-    /** Represents four ball */
+    // This section declares four instances each of Ball, Bubble, and Snowflake objects.
+    // These will later be initialized and used to display the 4 balls bouncing around and 4 bubbles rising and the 4 snowflakes falling down.
     private Ball ball1;
     private Ball ball2;
     private Ball ball3;
@@ -31,27 +33,33 @@ public class Sketch extends PApplet {
      */
     public void setup() {
         
-        // This creates the ball objects.
-        ball1 = new Ball(this,35,300,300,5,-2);
-        ball2 = new Ball(this,50,400,100,4,3);
-        ball3 = new Ball(this,45,300,100,2,5);
-        ball4 = new Ball(this,20,300,367,5,-4);
-        // This pargarph sets the colors for the balls.
-        ball1.setColors(color(0, 255, 0), color(0));      
-        ball2.setColors(color(255, 0, 0), color(0));      
-        ball3.setColors(color(0, 255, 255), color(0));      
-        ball4.setColors(color(255, 255, 0), color(0));
-        // This pargraph makes the bubble objects
-        bubble1 = new Bubble(this,20,300,300,0,-2);
-        bubble2 = new Bubble(this,25,400,100,0,-3);
-        bubble3 = new Bubble(this,30,300,100,0,-5);
-        bubble4 = new Bubble(this,15,300,367,0,-4);
-        // This pargarph makes teh objects for the snowflakes
-        snowflake1 = new Snowflake(this,40,300,200,0,-4);
-        snowflake2 = new Snowflake(this,30,100,100,1,2);
-        snowflake3 = new Snowflake(this,10,400,300,0,3);
-        snowflake4 = new Snowflake(this,20,200,400,1,2);
+// This creates the ball objects. Each one has its own size, position, and speed.
+ball1 = new Ball(this, 35, 300, 300, 5, -2);
+ball2 = new Ball(this, 50, 400, 100, 4, 3);
+ball3 = new Ball(this, 45, 300, 100, 2, 5);
+ball4 = new Ball(this, 20, 300, 367, 5, -4);
 
+// This section sets the colors for each ball. The colors are randomly generated 
+// using random numbers from 0–255 for red, green, and blue. 
+// The second color (color(0)) is usually for the ball’s outline or border.
+ball1.setColors(color(random(0, 255), random(0, 255), random(0, 255)), color(0));   
+ball2.setColors(color(random(0, 255), random(0, 255), random(0, 255)), color(0));      
+ball3.setColors(color(random(0, 255), random(0, 255), random(0, 255)), color(0));      
+ball4.setColors(color(random(0, 255), random(0, 255), random(0, 255)), color(0));
+
+// This part creates the bubble objects. Each bubble has a different size and speed.
+// The bubbles move upward (negative ySpeed) to look like they’re floating.
+bubble1 = new Bubble(this, 20, 300, 300, 0, -2);
+bubble2 = new Bubble(this, 25, 400, 100, 0, -3);
+bubble3 = new Bubble(this, 30, 300, 100, 0, -5);
+bubble4 = new Bubble(this, 15, 300, 367, 0, -4);
+
+// This part makes the snowflake objects. Each snowflake has a size, starting position,
+// and a small speed to make it fall. 
+snowflake1 = new Snowflake(this, 40, 300, 200, 0, -4);
+snowflake2 = new Snowflake(this, 30, 100, 100, 1, 2);
+snowflake3 = new Snowflake(this, 10, 400, 300, 0, 3);
+snowflake4 = new Snowflake(this, 20, 200, 400, 1, 2);
 
         
     }

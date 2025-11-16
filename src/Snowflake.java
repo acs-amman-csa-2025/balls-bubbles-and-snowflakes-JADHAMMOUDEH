@@ -21,7 +21,7 @@ class Snowflake {
         s.line(x + radius * .707f, y - radius * .707f,
                x - radius * .707f, y + radius * .707f);
     }
-
+// This constructor allows me to create instances of the snowflake class. 
     public Snowflake(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
         this.s = sketch;
         this.radius = radius;
@@ -30,6 +30,9 @@ class Snowflake {
         this.xSpeed = xspeed;
         this.ySpeed = yspeed;
     }
+// This method moves the snowflake based on its speed. 
+// It also makes the snowflake wrap around the screen when it goes off any edge, 
+// so it keeps floating instead of disappearing.
 public void move() {
         x = x + xSpeed;
         y = y + ySpeed;

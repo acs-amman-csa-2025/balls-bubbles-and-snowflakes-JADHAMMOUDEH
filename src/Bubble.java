@@ -1,7 +1,7 @@
 
 class Bubble {
 
-    //MISSING MANY INSTANCE VARIABLES
+   // INSTANCE VARIABLES
      private Sketch s;
     /** the radius of the ball */
     private float radius;
@@ -28,7 +28,7 @@ class Bubble {
 
     }
 
-
+// This is the bubble constructor. This is what allows teh program to create objects.
     public Bubble(Sketch sketch, float radius, float x, float y, float xspeed, float yspeed) {
         this.s = sketch;
         this.radius = radius;
@@ -59,7 +59,7 @@ class Bubble {
     public float getY() {
         return y;
     }
-
+    // This removes the color from the bubbles.
     public void draw() {
         s.stroke(borderColor);
         s.noFill();
