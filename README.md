@@ -1,3 +1,4 @@
+[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=21457731&assignment_repo_type=AssignmentRepo)
 # Balls, Bubbles, and Snowflakes
 
 The included template provides a fully working program that generates a single `Ball` object called `ball1`, and the hook to animate the ball. In this assignment you will expand upon this project to add more balls, in addition to finishing the creation of two more classes, `Bubble` and `Snowflake`.
